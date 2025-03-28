@@ -16,7 +16,7 @@ const getRandomItems = (arr, num) => arr.sort(() => 0.5 - Math.random()).slice(0
 // Generate resume
 const generateResume = (name) => {
     const skills = getRandomItems(skillsList, 3);
-    const projects = getRandomItems(projectsList, 2).map(project => `${project} using ${skills[Math.floor(Math.random() * skills.length)]}`);
+    const projects = getRandomItems(projectsList, 2).map(project => `${project} by ${name} using ${skills[Math.floor(Math.random() * skills.length)]}`);
     
     return {
         name,
